@@ -67,40 +67,23 @@ qplot(x, dnorm(x), geom="blank") +
   geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.")
 ```
 
-<<<<<<< HEAD
-But they were all of them deceived, for a new curve was made. In the land of Moivre-dor, in the fires of **M o $\mu$ n t <sp></sp>D $\sigma\sigma$ m**, the Dark Lord Gausson forged in secret, a master curve, to control all others. And into this curve he poured all his cruelty, his malice and his will to dominate all life. One curve to rule them all. 
-=======
-One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of Mount Doom, they fought for the freedom of Middle-earth. Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. 
->>>>>>> 2612f3960579b3d7ca3fc4929433420f6795c6b5
-
-```{r}
-```
-
-<<<<<<< HEAD
 One by one, the free peoples of Middle-earth fell to the power of the Curve. But there were some who resisted. A last alliance of men and elves marched against the armies of Moivre-dor, and on the very slopes of  **M o $\mu$ n t <sp></sp>D $\sigma\sigma$ m**, they fought for the freedom of Middle-earth. 
 
 ```{r}
-<<<<<<< HEAD
 
 ```
 
-Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. The Ring passed to Isildur, who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the ring of power has a will of its own. It betrayed Isildur, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the ring passed out of all knowledge. Until, when chance came, the ring ensnared another bearer. The ring came to the creature Gollum, who took it deep into the tunnels under the Misty Mountains, and there it consumed him. The ring gave to Gollum unnatural long life. For five hundred years it poisoned his mind; and in the gloom of Gollum's cave, it waited. Darkness crept back into the forests of the world. Rumor grew of a shadow in the East, whispers of a nameless fear, and the Ring of Power perceived. Its time had now come. It abandoned Gollum. But then something happened that the Ring did not intend. It was picked up by the most unlikely creature imaginable. A hobbit, Bilbo Baggins, of the Shire. For the time will soon come when hobbits will shape the fortunes of all...
+Victory was near, but the power of the Curve could not be undone. It was in this moment, when all hope had faded, that Sir Isaac Newton, son of the king, took up his father's gravity. And Gausson, enemy of the free peoples of Middle-earth, was defeated. The Curve passed to Sir Isaac Newton...
+
 ```{r}
-summary(cars)
-```
-=======
->>>>>>> f2046b344ba4f6ef04ebfbc3ab2a523cab4acd9a
-
-One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of **M o $\mu$ n t <sp></sp>D $\sigma\sigma$ m**, they fought for the freedom of Middle-earth. Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. 
-=======
-img <- readJPEG("dr-evil.jpg")
+img <- readJPEG("sir-isaac-newton.jpg")
 g <- rasterGrob(img, interpolate=TRUE)
->>>>>>> 2612f3960579b3d7ca3fc4929433420f6795c6b5
 
 x<-seq(-3,3,by=.01)
 qplot(x, dnorm(x), geom="blank") +
   annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
   geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...The Curve passed to")
 ```
-...who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the curve of power has a will of its own. It betrayed <bad statistician>, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the Curve passed out of all knowledge. Until, when chance came, the Curve ensnared another bearer. The Curve came to the creature Gauss, who took it deep into the tunnels under the histogram, and there it consumed him. The Curve gave to Gauss unnatural long life. For five hundred years it poisoned his mind; and in the gloom of Gauss' cave, it waited. Darkness crept back into the graphs of the world. Rumor grew of a shadow in the East, whispers of a nameless fear, and the Curve of Power perceived. Its time had now come. It abandoned Gauss. But then something happened that the Ring did not intend. It was picked up by the most unlikely creature imaginable. A hobbit, Gosset, of the Guinnes Brewery. For the time will soon come when hobbits will shape the distributions of all...
+
+...who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the curve of power has a will of its own. It betrayed Sir Isaac Newton, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the Curve passed out of all knowledge. Until, when chance came, the Curve ensnared every introductory Statistics student in Middle Earth. 
 
