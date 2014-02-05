@@ -1,12 +1,22 @@
-What if there wa no Normal distribution?
+What if there was no Normal distribution?
 ========================================================
 ####By Omesh Johar, Lindsey Jackson, and Andee Kaplan
 
+It began with the forging of the Curves of Normal. Three were given to the Elves; immortal, wisest and fairest of all beings.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+```{r}
+library(ggplot2)
+mu <- c(2, 3, 4)
+sigma <- (.3)
 
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+x <- seq(0, 6, by=.01)
+df <-  data.frame(x, freq_1 = dnorm(x, mean[1], sigma), freq_2 = dnorm(x, mean[2], sigma), freq_3 = dnorm(x, mean[3], sigma))
 
+
+qplot()
+
+```
+Seven, to the Dwarf Lords, great miners and craftsmen of the mountain halls. And nine, nine rings were gifted to the race of Men, who above all else desire power. For within these rings was bound the strength and the will to govern over each race. But they were all of them deceived, for a new ring was made. In the land of Mordor, in the fires of Mount Doom, the Dark Lord Sauron forged in secret, a master ring, to control all others. And into this ring he poured all his cruelty, his malice and his will to dominate all life. One ring to rule them all. One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of Mount Doom, they fought for the freedom of Middle-earth. Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. The Ring passed to Isildur, who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the ring of power has a will of its own. It betrayed Isildur, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the ring passed out of all knowledge. Until, when chance came, the ring ensnared another bearer. The ring came to the creature Gollum, who took it deep into the tunnels under the Misty Mountains, and there it consumed him. The ring gave to Gollum unnatural long life. For five hundred years it poisoned his mind; and in the gloom of Gollum's cave, it waited. Darkness crept back into the forests of the world. Rumor grew of a shadow in the East, whispers of a nameless fear, and the Ring of Power perceived. Its time had now come. It abandoned Gollum. But then something happened that the Ring did not intend. It was picked up by the most unlikely creature imaginable. A hobbit, Bilbo Baggins, of the Shire. For the time will soon come when hobbits will shape the fortunes of all...
 ```{r}
 summary(cars)
 ```
