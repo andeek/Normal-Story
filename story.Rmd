@@ -1,7 +1,18 @@
-What if there was no Normal distribution?
+One Curve to Rule Them All...
 ========================================================
 ####By Omesh Johar, Lindsey Jackson, and Andee Kaplan
+```{r, echo=FALSE}
+#install.packages("jpeg")
+library(jpeg)
+library(grid)
+img <- readJPEG("ring-lord-of-the-rings.jpg")
+g <- rasterGrob(img, interpolate=TRUE)
 
+x<-seq(-3,3,by=.01)
+qplot(x, dnorm(x), geom="blank") +
+  annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
+  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.")
+```
 It began with the forging of the Curves of Normal. Three were given to the Elves; immortal, wisest and fairest of all beings.
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -10,11 +21,12 @@ library(reshape2)
 mu <- c(2, 3, 4)
 sigma <- (.15)
 
-df <-  data.frame(x = seq(0, 6, by=.01))
-df <- cbind(df, sapply(mu, function(m) dnorm(df$x, m, sigma)))
-df.m <- melt(df, id.vars="x")
+df.e <-  data.frame(x = seq(0, 6, by=.01))
+df.e <- cbind(df, sapply(mu, function(m) .25*dnorm(df$x, m, sigma)))
+df.e.m <- melt(df, id.vars="x")
 
-qplot(x, value, group=variable, colour=variable, data=df.m, geom="line") + 
+qplot(x, value, group=variable, colour=variable, data=df.e.m, geom="line") + 
+  ylim(c(0,1)) +
   xlab("") + ylab("") + guides(colour=FALSE) + ggtitle("Curves given to the Elves")
 
 ```
@@ -22,6 +34,16 @@ qplot(x, value, group=variable, colour=variable, data=df.m, geom="line") +
 Seven, to the Dwarf Lords, great miners and craftsmen of the mountain halls. 
 
 ```{r}
+mu <- 1:7*5
+sigma <- (5)
+
+df.d <-  data.frame(x = seq(min(mu) - 3*sigma, max(mu) + 3*sigma, by=.01))
+df.d <- cbind(df, sapply(mu, function(m) dnorm(df$x, m, sigma)))
+df.d.m <- melt(df, id.vars="x")
+
+qplot(x, value, group=variable, colour=variable, data=df.d.m, geom="line") + 
+  ylim(c(0,1)) +
+  xlab("") + ylab("") + guides(colour=FALSE) + ggtitle("Curves given to the Dwarves")
 
 ```
 
@@ -36,6 +58,7 @@ But they were all of them deceived, for a new curve was made. In the land of Moi
 ```{r}
 ```
 
+<<<<<<< HEAD
 One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of Mount Doom, they fought for the freedom of Middle-earth. 
 
 ```{r}
@@ -46,10 +69,10 @@ Victory was near, but the power of the ring could not be undone. It was in this 
 ```{r}
 summary(cars)
 ```
+=======
+>>>>>>> f2046b344ba4f6ef04ebfbc3ab2a523cab4acd9a
 
-You can also embed plots, for example:
+One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of Mount Doom, they fought for the freedom of Middle-earth. Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. 
 
-```{r fig.width=7, fig.height=6}
-plot(cars)
-```
+The Curve passed to <bad statistician>, who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the curve of power has a will of its own. It betrayed <bad statistician>, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the Curve passed out of all knowledge. Until, when chance came, the Curve ensnared another bearer. The Curve came to the creature Gauss, who took it deep into the tunnels under the histogram, and there it consumed him. The Curve gave to Gauss unnatural long life. For five hundred years it poisoned his mind; and in the gloom of Gauss' cave, it waited. Darkness crept back into the graphs of the world. Rumor grew of a shadow in the East, whispers of a nameless fear, and the Curve of Power perceived. Its time had now come. It abandoned Gauss. But then something happened that the Ring did not intend. It was picked up by the most unlikely creature imaginable. A hobbit, Gosset, of the Guinnes Brewery. For the time will soon come when hobbits will shape the distributions of all...
 
