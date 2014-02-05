@@ -1,0 +1,17 @@
+{
+    "contents" : "What if there wa no Normal distribution?\n========================================================\n####By Omesh Johar, Lindsey Jackson, and Andee Kaplan\n\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).\n\nWhen you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\n```{r}\nsummary(cars)\n```\n\nYou can also embed plots, for example:\n\n```{r fig.width=7, fig.height=6}\nplot(cars)\n```\n\n",
+    "created" : 1391636363602.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1558704310",
+    "id" : "CF83865F",
+    "lastKnownWriteTime" : 1391636437,
+    "path" : "~/GitHub/Normal-Story/story.Rmd",
+    "project_path" : "story.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
