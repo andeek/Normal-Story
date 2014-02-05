@@ -3,17 +3,19 @@ What if there was no Normal distribution?
 ####By Omesh Johar, Lindsey Jackson, and Andee Kaplan
 
 It began with the forging of the Curves of Normal. Three were given to the Elves; immortal, wisest and fairest of all beings.
-
-```{r}
+```{r, echo=FALSE}
 library(ggplot2)
+library(reshape2)
+
 mu <- c(2, 3, 4)
-sigma <- (.3)
+sigma <- (.15)
 
-x <- seq(0, 6, by=.01)
-df <-  data.frame(x, freq_1 = dnorm(x, mean[1], sigma), freq_2 = dnorm(x, mean[2], sigma), freq_3 = dnorm(x, mean[3], sigma))
+df <-  data.frame(x = seq(0, 6, by=.01))
+df <- cbind(df, sapply(mu, function(m) dnorm(df$x, m, sigma)))
+df.m <- melt(df, id.vars="x")
 
-
-qplot()
+qplot(x, value, group=variable, colour=variable, data=df.m, geom="line") + 
+  xlab("") + ylab("") + guides(colour=FALSE) + ggtitle("Curves given to the Elves")
 
 ```
 
