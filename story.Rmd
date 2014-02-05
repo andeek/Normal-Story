@@ -1,18 +1,7 @@
 One Curve to Rule Them All...
 ========================================================
 ####By Omesh Johar, Lindsey Jackson, and Andee Kaplan
-```{r, echo=FALSE}
-#install.packages("jpeg")
-library(jpeg)
-library(grid)
-img <- readJPEG("ring-lord-of-the-rings.jpg")
-g <- rasterGrob(img, interpolate=TRUE)
 
-x<-seq(-3,3,by=.01)
-qplot(x, dnorm(x), geom="blank") +
-  annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
-  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.")
-```
 It began with the forging of the Curves of Normal. Three were given to the Elves; immortal, wisest and fairest of all beings.
 ```{r, echo=FALSE}
 library(ggplot2)
@@ -22,7 +11,7 @@ mu <- c(2, 3, 4)
 sigma <- (.15)
 
 df.e <-  data.frame(x = seq(0, 6, by=.01))
-df.e <- cbind(df, sapply(mu, function(m) .25*dnorm(df$x, m, sigma)))
+df.e <- cbind(df.e, sapply(mu, function(m) .25*dnorm(df.e$x, m, sigma)))
 df.e.m <- melt(df, id.vars="x")
 
 qplot(x, value, group=variable, colour=variable, data=df.e.m, geom="line") + 
@@ -38,7 +27,7 @@ mu <- 1:7*5
 sigma <- (5)
 
 df.d <-  data.frame(x = seq(min(mu) - 3*sigma, max(mu) + 3*sigma, by=.01))
-df.d <- cbind(df, sapply(mu, function(m) dnorm(df$x, m, sigma)))
+df.d <- cbind(df.d, sapply(mu, function(m) dnorm(df.d$x, m, sigma)))
 df.d.m <- melt(df, id.vars="x")
 
 qplot(x, value, group=variable, colour=variable, data=df.d.m, geom="line") + 
@@ -49,15 +38,34 @@ qplot(x, value, group=variable, colour=variable, data=df.d.m, geom="line") +
 
 And nine--nine curves were gifted to the race of Men, who above all else desire power. For within these curves was bound the strength and the will to govern over each race. 
 
-```{r}
+```{r, echo=FALSE}
+mu <- 1:9*7
+sigma <- (2)
+
+df.m <-  data.frame(x = seq(min(mu) - 3*sigma, max(mu) + 3*sigma, by=.01))
+df.m <- cbind(df.m, sapply(mu, function(m) dnorm(df.m$x, m, sigma)))
+df.m.m <- melt(df, id.vars="x")
+
+qplot(x, 4*value, group=variable, colour=variable, data=df.m.m, geom="line", size=3) + 
+  ylim(c(0,1)) +
+  xlab("") + ylab("") + guides(colour=FALSE, size=FALSE) + ggtitle("Curves given to the Race of Men")
 
 ```
 
-But they were all of them deceived, for a new curve was made. In the land of Moivre-dor, in the fires of Mount Doom, the Dark Lord Gausson forged in secret, a master curve, to control all others. And into this curve he poured all his cruelty, his malice and his will to dominate all life. One curve to rule them all. 
+But they were all of them deceived, for a new curve was made. In the land of Moivre-dor, in the fires of Mount Doom, the Dark Lord Gausson forged in secret, a standard Normal curve, to control all others. And into this master curve he poured all his cruelty, his malice and his will to dominate all life. One curve to rule them all. 
 
-```{r}
+```{r, echo=FALSE}
+#install.packages("jpeg")
+library(jpeg)
+library(grid)
+img <- readJPEG("ring-lord-of-the-rings.jpg")
+g <- rasterGrob(img, interpolate=TRUE)
+
+x<-seq(-3,3,by=.01)
+qplot(x, dnorm(x), geom="blank") +
+  annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
+  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.")
 ```
-
 
 One by one, the free peoples of Middle-earth fell to the power of the Ring. But there were some who resisted. A last alliance of men and elves marched against the armies of Mordor, and on the very slopes of Mount Doom, they fought for the freedom of Middle-earth. Victory was near, but the power of the ring could not be undone. It was in this moment, when all hope had faded, that Isildur, son of the king, took up his father's sword. And Sauron, enemy of the free peoples of Middle-earth, was defeated. 
 
