@@ -110,7 +110,18 @@ g <- rasterGrob(img, interpolate=TRUE)
 x<-seq(-3,3,by=.01)
 qplot(x, dnorm(x), geom="blank") +
   annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
-  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.")
+  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...And in the Darkness Bind them.") +
+  theme_bw() +
+  theme(axis.ticks = element_blank(),
+  axis.line=element_blank(),
+  axis.text.x=element_blank(),
+  axis.text.y=element_blank(),
+  axis.ticks=element_blank(),
+  axis.title.x=element_blank(),
+  axis.title.y=element_blank(),
+  panel.border=element_blank(),
+  panel.grid.major=element_blank(),
+  panel.grid.minor=element_blank())
 ```
 
 One by one, the free peoples of Middle-earth fell to the power of the Curve. But there were some who resisted. A last alliance of men and elves marched against the armies of Moivre-dor, and on the very slopes of  **M o $\mu$ n t <sp></sp>D $\sigma\sigma$ m**, they fought for the freedom of Middle-earth. 
@@ -151,7 +162,18 @@ g <- rasterGrob(img, interpolate=TRUE)
 x<-seq(-3,3,by=.01)
 qplot(x, dnorm(x), geom="blank") +
   annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
-  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...The Curve passed to")
+  geom_area(fill="red", alpha=.6) + xlab("") + ylab("") + ggtitle("...The Curve passed to") + 
+  theme_bw() +
+  theme(axis.ticks = element_blank(),
+  axis.line=element_blank(),
+  axis.text.x=element_blank(),
+  axis.text.y=element_blank(),
+  axis.ticks=element_blank(),
+  axis.title.x=element_blank(),
+  axis.title.y=element_blank(),
+  panel.border=element_blank(),
+  panel.grid.major=element_blank(),
+  panel.grid.minor=element_blank())
 ```
 
 ...who had this one chance to destroy evil forever, but the hearts of men are easily corrupted. And the curve of power has a will of its own. It betrayed Sir Isaac Newton, to his death. And some things that should not have been forgotten were lost. History became legend. Legend became myth. And for two and a half thousand years, the Curve passed out of all knowledge. Until, when chance came, the Curve ensnared every introductory Statistics student in Middle Earth. 
